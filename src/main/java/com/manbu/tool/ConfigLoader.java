@@ -93,7 +93,7 @@ public class ConfigLoader {
 	
 	private static File getConfigFile() {
 		String tmpdir = System.getProperty("user.home");
-		File tempDirectory = new File(tmpdir + File.separatorChar + ".viathink");
+		File tempDirectory = new File(tmpdir + File.separatorChar + ".temp");
 		File configFile = new File(tempDirectory, CONFIG_FILE);
 		return configFile;
 	}
