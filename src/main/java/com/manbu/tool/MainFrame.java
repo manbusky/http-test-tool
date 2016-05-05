@@ -133,7 +133,7 @@ public class MainFrame extends JFrame implements ActionListener {
 			method.getParams().setIntParameter(HttpMethodParams.SO_TIMEOUT, CONNECTION_TIME_OUT);
 
 			int status = client.executeMethod(method);
-			String body = method.getResponseBodyAsString();
+			String body = new String(method.getResponseBody(),"utf-8");
 			Header[] responseHeaders = method.getResponseHeaders();
 			headers = new HashMap<String, String>();
 			for (Header h : responseHeaders) {
